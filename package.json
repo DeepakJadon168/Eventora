@@ -1,20 +1,23 @@
 {
-  "name": "eventora-mern-main",
+  "name": "eventora",
+  "private": true,
   "version": "1.0.0",
-  "description": "Eventora is a full-stack MERN application that allows users to seamlessly browse, register, and pay natively without any third party tools. It features an administrative dashboard for event organizers to create and manage free and paid events. All bookings can be managed manually by an admin to handle payments directly.",
-  "homepage": "https://github.com/DeepakJadon168/Eventora#readme",
-  "bugs": {
-    "url": "https://github.com/DeepakJadon168/Eventora/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DeepakJadon168/Eventora.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "description": "Root scripts for Eventora client and server",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install:all": "npm install --prefix server --legacy-peer-deps && npm install --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev:server\" \"npm run dev:client\"",
+    "start:server": "npm run start --prefix server",
+    "start:client": "npm run preview --prefix client",
+    "start": "concurrently -n server,client -c blue,green \"npm run start:server\" \"npm run start:client\"",
+    "build": "npm run build --prefix client",
+    "lint": "npm run lint --prefix client",
+    "setup": "npm run install:all",
+    "dev:all": "npm run install:all && npm run dev",
+    "start:all": "npm run install:all && npm run start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
   }
 }
