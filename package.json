@@ -1,0 +1,20 @@
+{
+  "name": "eventora-mern-main",
+  "version": "1.0.0",
+  "description": "Eventora is a full-stack MERN application that allows users to seamlessly browse, register, and pay natively without any third party tools. It features an administrative dashboard for event organizers to create and manage free and paid events. All bookings can be managed manually by an admin to handle payments directly.",
+  "homepage": "https://github.com/DeepakJadon168/Eventora#readme",
+  "bugs": {
+    "url": "https://github.com/DeepakJadon168/Eventora/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeepakJadon168/Eventora.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
